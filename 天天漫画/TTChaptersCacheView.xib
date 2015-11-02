@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E9" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TTChaptersCacheView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="14U-zv-A7Y">
+                    <rect key="frame" x="128" y="165" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="14U-zv-A7Y" secondAttribute="height" multiplier="1:1" id="Bwm-5w-FPP"/>
+                        <constraint firstAttribute="width" constant="120" id="bda-9Z-kKK"/>
+                    </constraints>
+                </imageView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressImage="reading_progress" trackImage="total_progress" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-73-oPl">
+                    <rect key="frame" x="112" y="324" width="150" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Vzd-2M-BO9"/>
+                        <constraint firstAttribute="height" constant="2" id="YUa-Ey-JLe"/>
+                    </constraints>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="努力加载中..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFb-7G-VOg">
+                    <rect key="frame" x="128" y="359" width="120" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="6DK-fQ-2ht"/>
+                        <constraint firstAttribute="width" secondItem="NFb-7G-VOg" secondAttribute="height" multiplier="100:21" id="wEm-Zb-ZmU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="14U-zv-A7Y" secondAttribute="centerX" id="00G-Az-JuO"/>
+                <constraint firstItem="NFb-7G-VOg" firstAttribute="top" secondItem="wgb-73-oPl" secondAttribute="bottom" constant="33" id="5pr-52-IRk"/>
+                <constraint firstItem="wgb-73-oPl" firstAttribute="top" secondItem="14U-zv-A7Y" secondAttribute="bottom" constant="39" id="Drg-fC-hJ3"/>
+                <constraint firstAttribute="centerX" secondItem="14U-zv-A7Y" secondAttribute="centerX" id="ESe-Vx-saE"/>
+                <constraint firstAttribute="centerX" secondItem="wgb-73-oPl" secondAttribute="centerX" id="Wgs-bg-u6v"/>
+                <constraint firstItem="14U-zv-A7Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="165" id="XbK-2m-ZFR"/>
+                <constraint firstAttribute="centerX" secondItem="NFb-7G-VOg" secondAttribute="centerX" id="cza-xI-ZYZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImage" destination="14U-zv-A7Y" id="7bl-zX-vHJ"/>
+                <outlet property="iconTop" destination="XbK-2m-ZFR" id="2Zq-VQ-lAj"/>
+                <outlet property="iconWidth" destination="bda-9Z-kKK" id="RUq-fH-7wN"/>
+                <outlet property="progress" destination="wgb-73-oPl" id="Bri-ii-Jdi"/>
+                <outlet property="progressTop" destination="Drg-fC-hJ3" id="Dy0-0g-LY8"/>
+                <outlet property="progressWidth" destination="Vzd-2M-BO9" id="5An-mA-IVj"/>
+                <outlet property="textLabTop" destination="5pr-52-IRk" id="qmy-sq-wcZ"/>
+                <outlet property="textLabWidth" destination="6DK-fQ-2ht" id="3t9-Mq-16l"/>
+            </connections>
+            <point key="canvasLocation" x="223.5" y="297.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="reading_progress" width="17" height="2"/>
+        <image name="total_progress" width="17" height="2"/>
+    </resources>
+</document>

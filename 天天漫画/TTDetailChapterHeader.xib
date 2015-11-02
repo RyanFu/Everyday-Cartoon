@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E9" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QuL-wb-iOr" customClass="TTDetailChapterHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目录：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-vB-6qY">
+                    <rect key="frame" x="17" y="14" width="51" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="alR-m4-g7E"/>
+                        <constraint firstAttribute="width" secondItem="hfH-vB-6qY" secondAttribute="height" multiplier="17:7" id="up3-qq-h7b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sort_positive" translatesAutoresizingMaskIntoConstraints="NO" id="JVH-h0-NDO">
+                    <rect key="frame" x="243" y="18" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="JVH-h0-NDO" secondAttribute="height" multiplier="1:1" id="3f0-Or-f1w"/>
+                        <constraint firstAttribute="width" constant="15" id="Udy-oo-tIk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正序" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6y-cP-rdr">
+                    <rect key="frame" x="263" y="14" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="HnY-Ce-qAI"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="KDz-wd-Rb7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="JVH-h0-NDO" secondAttribute="centerY" id="3nX-RK-PWS"/>
+                <constraint firstAttribute="centerY" secondItem="hfH-vB-6qY" secondAttribute="centerY" id="DxI-jf-aFB"/>
+                <constraint firstItem="Q6y-cP-rdr" firstAttribute="leading" secondItem="JVH-h0-NDO" secondAttribute="trailing" constant="5" id="U2z-Su-DYL"/>
+                <constraint firstAttribute="trailing" secondItem="Q6y-cP-rdr" secondAttribute="trailing" constant="15" id="V0a-Gt-7dl"/>
+                <constraint firstAttribute="centerY" secondItem="Q6y-cP-rdr" secondAttribute="centerY" id="u27-DN-N52"/>
+                <constraint firstItem="hfH-vB-6qY" firstAttribute="leading" secondItem="QuL-wb-iOr" secondAttribute="leading" constant="17" id="yaO-sB-NjR"/>
+            </constraints>
+            <connections>
+                <outlet property="arrowImage" destination="JVH-h0-NDO" id="7to-Vx-Snk"/>
+                <outlet property="orderLab" destination="Q6y-cP-rdr" id="nmK-ng-NFM"/>
+            </connections>
+            <point key="canvasLocation" x="270" y="156"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="sort_positive" width="24" height="24"/>
+    </resources>
+</document>
